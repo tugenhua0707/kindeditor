@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link href="./libs/kindeditor/themes/default/default.css" rel="stylesheet" />
+  <script src='./libs/jquery-1.11.0.min.js'></script>
+  <script type="text/javascript" src="./libs/kindeditor/kindeditor-all.js"></script>
+  <script type="text/javascript" src="./libs/kindeditor/lang/zh_CN.js"></script>
+  <style>
+    * {margin: 0;padding:0;}
+  </style>
+</head>
+<body>
+  <textarea id="editor_id" name="content" style="width:700px;height:300px;">
+    html内容
+  </textarea>
+  <script>
+    KindEditor.ready(function(K) {
+      K.create('#editor_id', {
+        items: [
+          'source', 'fontname', 'forecolor', 'fontsize', 'hilitecolor', 'bold', 'italic', 'underline' ,'hr',
+          '|', 'emoticons', 'justifyleft', 'justifycenter', 'justifyright','insertorderedlist','insertunorderedlist','justifyfull', 'multiimage2','link', 'fullscreen', 'iphone'
+        ],
+        // uploadJson: '',  // 该配置是上传图片的地址
+        pasteType: 1,      // 0 禁止黏贴 1 是纯文本黏贴 2 是html黏贴
+        minHeight: 375
+      });
+    });
+  </script>
+</body>
+</html>
