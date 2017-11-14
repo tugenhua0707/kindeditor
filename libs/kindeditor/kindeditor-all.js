@@ -6508,7 +6508,6 @@ KindEditor.plugin('code', function(K) {
 });
 /******************************************************************************
  * KindEditor 表情更改
- * @author kongzhi@tongbanjie.com
  * @date 17/04/16
  ******************************************************************************/
 KindEditor.plugin('emoticons', function(K) {
@@ -6811,7 +6810,6 @@ KindEditor.plugin('emoticons', function(K) {
 });
 /******************************************************************************
  * KindEditor 添加基金功能
- * @author kongzhi@tongbanjie.com
  * @date 17/04/16
  ******************************************************************************/
  KindEditor.plugin('fund', function(K) {
@@ -6863,7 +6861,7 @@ KindEditor.plugin('emoticons', function(K) {
     };
     self.clickToolbar(name, function() {
       $.ajax({
-        url: 'http://fund.tongbanjie.com/prod/api/funddatainfo',
+        url: '',
         dataType: 'json',
         async: false,
         success: function(data) {
@@ -7024,7 +7022,6 @@ KindEditor.plugin('emoticons', function(K) {
  });
 /*******************************************************************************
  * iphone移动端预览
- * @author kongzhi@tongbanjie.com
  * @data 17/08/08
  *******************************************************************************/
  KindEditor.plugin('iphone', function(K) {
@@ -8425,11 +8422,11 @@ KindEditor.plugin('media', function(K) {
             }
             if (selectVal === 0) {
               // 音频
-              srcUrl = 'http://res.tongbanjie.com/wap/media/audio/index.html?title=' + audioVal + '&url=' + url;
+              srcUrl = '';
               srcImg = self.themesPath + 'common/blank.gif';
             } else if(selectVal === 1) {
               // 视屏
-              srcUrl = 'http://res.tongbanjie.com/wap/media/video/index.html?pic=' + videoVal + '&video=' + url;
+              srcUrl = '';
               srcImg = videoVal;
             }
             var html = K.mediaImg(srcImg, {
